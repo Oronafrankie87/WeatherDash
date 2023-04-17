@@ -2,3 +2,69 @@
     font-family: 'Indie Flower', cursive;
     font-family: 'Special Elite', cursive;
 }
+
+body {
+    margin: 25px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.search-panel {
+    display: flex;
+    justify-content: center;
+    background-color: #DCDCDC;
+    border-radius: 0 0 10px 10px;
+}
+
+.search-city {
+    margin-top: 10px
+}
+
+.city-list-box {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    line-height: 0.7;
+
+}
+
+
+.results-panel {
+    visibility: hidden;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top: 7px;
+}
+
+
+.name-block,
+.uv-index-block {
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    display: inline;
+}
+
+
+.card-header {
+    background-color: rgb(7, 8, 8);
+    color: white;
+}
+
+.card-header:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+
+.card-body {
+    background-color: rgb(19, 169, 219);
+    border-radius: 0 0 10px 10px;
+}
