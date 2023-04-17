@@ -68,3 +68,23 @@ body {
     background-color: rgb(19, 169, 219);
     border-radius: 0 0 10px 10px;
 }
+
+@media screen and (max-width: 992px) {
+    * {
+        align-items: center;
+    }
+    .search-panel {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 772px) {
+    .search-panel {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .search-panel {
+        width: 100%;
+    }
+}
