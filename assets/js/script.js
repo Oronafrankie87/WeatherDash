@@ -13,7 +13,7 @@ function citySearch() {
     if (response.ok) {
       response.json().then(function (data) {
         $("#city-name")[0].textContent =
-          cityName + " (" + moment().format("M/D/YYYY") + ")";
+          cityName + " (" + dayjs().format("M/D/YYYY") + ")";
 
         $("#city-list").append(
           '<button type="button" class="list-group-item list-group-item-light list-group-item-action city-name">' +
@@ -147,7 +147,7 @@ $(".city-list-box").on("click", ".city-name", function () {
   coordinates[1] = parseFloat(coordinates[1]);
 
   $("#city-name")[0].textContent =
-    $(this)[0].textContent + " (" + moment().format("M/D/YYYY") + ")";
+    $(this)[0].textContent + " (" + dayjs().format("M/D/YYYY") + ")";
 
   getListCity(coordinates);
 });
