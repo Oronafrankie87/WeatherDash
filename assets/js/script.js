@@ -86,7 +86,7 @@ function getCurrentWeather(data) {
   getForecast(data);
 }
 
-//get forecast function
+//get forecast function loops through the next 5 days 
 
 function getForecast(data) {
   for (var i = 0; i < 5; i++) {
@@ -110,3 +110,44 @@ function getForecast(data) {
     $(currentSelector)[0].textContent = "Humidity: " + forecast.humidity + "%";
   }
 }
+
+//This function searches cities even though they may be lowercased
+
+function titleCase(city) {
+  var cityNameUpdate = city.toLowerCase().split(" ");
+  var retrievedCity = "";
+  for (var i = 0; i < cityNameUpdate.length; i++) {
+    cityNameUpdate[i] =
+      cityNameUpdate[i][0].toUpperCase() + cityNameUpdate[i].slice(1);
+    retrievedCity += " " + cityNameUpdate[i];
+  }
+  return retrievedCity;
+}
+
+//Function simplifies Unix time
+function convertUnixTime(data, index) {
+  const dateObject = new Date(data.daily[index + 1].dt * 1000);
+
+  return dateObject.toLocaleDateString();
+}
+
+$("#search-button").on("click", function (e) {
+  e.preventDefault();
+
+  citySearch();
+
+  $("form")[0].reset();
+});
+
+//
+
+$(".city-list-box").on("click", ".city-name", function () {
+  var coordinates = localStorage.getItem($(this)[0].textContent).split(" ");
+  coordinates[0] = parseFloat(coordinates[0]);
+  coordinates[1] = parseFloat(coordinates[1]);
+
+  $("#city-name")[0].textContent =
+    $(this)[0].textContent + " (" + moment().format("M/D/YYYY") + ")";
+
+  getListCity(coordinates);
+});
