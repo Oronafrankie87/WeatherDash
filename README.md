@@ -17,7 +17,7 @@ https://oronafrankie87.github.io./WeatherDash/
   "https://api.openweathermap.org/data/2.5/weather?q="
 
 ## Attributes and Acknowledgements
-  Code and styling completed by the developer with some input by my tutor, Jacob Nordon.  Reference was taken from Weather Dashboard project done by github.com/Owaislslam.
+  Code and styling completed by the developer with some input by my tutor, Jacob Nordon.  Reference was taken heavily from Weather Dashboard project done by github.com/Owaislslam.  The code was put through ChatGPT piece by piece to understand how it works and deconstruct it.
  
 
  ## License
